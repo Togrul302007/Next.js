@@ -9,14 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        brand: {
-          light: "#60a5fa",
-          primary: "#1d4ed8",
-          dark: "#1e3a8a",
-        },
-        surface: "#ffffff",
-        background: "#f8fafc",
-      },
+            brand: '#1d4ed8',     // Accent rəngin
+            darkText: '#0f172a',  // Near-black text
+            bgLight: '#f8fafc',   // Near-white background
+        }
     },
   },
   plugins: [],
