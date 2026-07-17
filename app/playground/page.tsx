@@ -1,8 +1,12 @@
 "use client";
+
 import { useState } from "react";
+
 import { Modal } from "../../components/ui/Modal";
-import { Tabs } from "../../components/ui/Tabs";
+import { Tabs } from "../../components/ui/AccessibleTabs";
+
 import { Disclosure } from "../../components/ui/Disclosure";
+
 
 export default function PlaygroundPage() {
   const [isModalOpen, setIsModalOpen] = useState(false);
