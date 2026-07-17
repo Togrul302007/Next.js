@@ -1,5 +1,9 @@
 import Link from 'next/link';
 import './globals.css';
+import { Geist } from "next/font/google";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+
 
 // app/layout.tsx və ya Navbar komponentinin daxilində:
 
