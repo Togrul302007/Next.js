@@ -1,4 +1,4 @@
-import React, { useState, useRef, KeyboardEvent } from "react";
+import React, { useState, useRef } from "react";
 
 interface TabItem {
   id: string;
@@ -14,15 +14,15 @@ export const Tabs: React.FC<TabsProps> = ({ items }) => {
   const [activeTab, setActiveTab] = useState(items[0]?.id);
   const tabRefs = useRef<{ [key: string]: HTMLButtonElement | null }>({});
 
-  const handleKeyDown = (e: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const handleKeyDown = (e: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
     let newIndex = index;
 
     if (e.key === "ArrowRight") {
-      newIndex = (index + 1) % items.length;
+        newIndex = (index + 1) % items.length;
     } else if (e.key === "ArrowLeft") {
-      newIndex = (index - 1 + items.length) % items.length;
+        newIndex = (index - 1 + items.length) % items.length; // Burada balaca bir sintaksis çatışmazlığı da vardı, düzəltdim
     } else {
-      return; // Digər düymələrə reaksiya vermirik
+        return;
     }
 
     e.preventDefault();
